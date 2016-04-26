@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
-
 # Ruby version
 ruby '2.2.3'
+#Charkick Graphics
+gem "chartkick"
 #Redis-server
 gem 'redis-rails'
 #Puma server

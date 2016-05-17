@@ -1,6 +1,17 @@
+
 Rails.application.routes.draw do
-  resources :products
-  mount Dashing::Engine, at: Dashing.config.engine_path
+  get 'homes/show'
+  get '/homes/charts'
+  get '/homes/zoom'
+
+
+  resources :books
+  
+Rails.application.routes.draw do
+  root to: "homes#charts"
+end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

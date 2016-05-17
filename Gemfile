@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
-# Ruby version
-ruby '2.2.3'
-#Charkick Graphics
-gem "chartkick"
-#Redis-server
-gem 'redis-rails'
-#Puma server
-gem 'puma'
-#Dashing gem
-gem 'dashing-rails'
+
+#Bootstrap-sass
+gem 'bootstrap-sass', '~> 3.3.6'
+#Database helper gems
+gem 'groupdate', '~> 2.1.1'
+gem 'active_median', '~> 0.1.0'
+#chartkick gem
+gem 'chartkick', '~> 1.2.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5'
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -41,8 +41,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
 end
 
 group :development do
@@ -51,12 +49,5 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-end
-
-group :production do
-  gem 'pg', group: :production
-  #testing
-  gem 'rails_12factor', group: :production
-
 end
 
